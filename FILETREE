@@ -1,0 +1,139 @@
+Filetree
+
+Here is a description of each file and each folder for future reference and expansion
+
+-AUTHORS						-	authors copyright file
+-BUGS							-	a list of most ardent bugs and project status
+-CHANGELOG						- 	changes diary
+-COPYING						-	copyright distribution license
+\documentation					- 	documentation folder
+ -config_full.xml				- 	sample config file with sources and patches
+ -config.xml					- 	sample config file
+ \sample						-	a sample apkg run input and output
+  -autoconf-2.62-1.raw			-	a raw build output file
+  -autoconf-2.62-1.run			-	a full run log file
+  -autoconf-2.62-1.sh			-	a shell build output file
+  -autoconf-2.62-1.spec			-	an RPM build spec file output
+  -autoconf-2.62-1.xm			-	the XML input control file
+-FILETREE						-	a listing of all files and folders with their respective roles
+-INSTALL						-	installation information and instructions
+\pkg							-	ports-like tree of packages based on categories
+ |									 samples included for better concept understanding until 
+ |									 full documentation is released
+ \devel
+  \languages
+   \bin86
+    -bin86-0.16.17-1.xml		- 	sample bin86 XML control file
+   \tools
+    \autoconf
+     -autoconf-2.62-1.xml		- 	sample autoconf XML control file
+    \automake
+     -automake-1.10.1-1.xml		- 	sample automake XML control file
+ \system
+  \shells
+   \bash
+    -bash-3.2-1.xml				- 	sample bash XML control file
+-README							- 	THE readme file
+\source							- 	apkg source code tree
+ -__init__.py					- 	main initialization file
+ -apkg							- 	shell wrapper for initialization to python scripts
+ -archiver.py					- 	archiver/unarchiver
+ \export						-	export options
+  -__init__.py					-	export module initialization and callthrough
+  -raw.py						-	raw file processor and exporter		
+  -rpm.py						-	RPM spec file processor and exporter		
+  -sh.py						-	shell file processor and exporter		
+  -xml.py						-	XML file processor and exporter (deprecated)		
+ \gui							-	gui components
+  \xmlEditor					-	cross-platform XML spec file editor
+   -xmlEditor_xrc.py
+   -xmlEditor.xcfg
+   -xmlEditor.xrc
+ \heuristics					-	heuristics
+  -__init__.py					-	heuristic mode identifier and initialization
+  -automake.py					-	automake-based heuristic
+  -perl.py						-	perl-based heuristic
+  -python.py					-	python-based heuristic  
+ -log.conf						- 	log configuration file
+ 									 specifies log levels, types, and formatting options
+ -log.py						-	log wrapper for all logging calls
+ \parser						-	parsers
+  -__init__.py					-	parser mode initialization
+  \deprecated					-	previous parsers that were scraped
+   -first_xmlControlParser.py	-	first parser
+   -second_xmlControlParser,py	-	second parser
+   									 the last tag never got processed and processor too bloated
+  -reader.py					-	XML control file reader
+  -writer.py					-	XML control file writer
+ \resources						-	processes foreign resources
+  -__init__.py					-	resource type initialization
+  -ftp.py						-	ftp resource handler
+  -http.py						-	http resource handler
+-THANKS							- a special thanks file 
+
+
+4.0K	./AUTHORS
+4.0K	./BUGS
+4.0K	./CHANGELOG
+ 20K	./COPYING
+4.0K	./documentation/config.xml
+8.0K	./documentation/config_full.xml
+4.0K	./documentation/sample/autoconf-2.62-1.raw
+ 28K	./documentation/sample/autoconf-2.62-1.run
+4.0K	./documentation/sample/autoconf-2.62-1.sh
+4.0K	./documentation/sample/autoconf-2.62-1.spec
+4.0K	./documentation/sample/autoconf-2.62-1.xml
+ 44K	./documentation/sample
+ 56K	./documentation
+8.0K	./FILETREE
+4.0K	./INSTALL
+4.0K	./pkg/devel/languages/bin86/bin86-0.16.17-1.xml
+4.0K	./pkg/devel/languages/bin86
+4.0K	./pkg/devel/languages
+4.0K	./pkg/devel/tools/autoconf/autoconf-2.62-1.xml
+4.0K	./pkg/devel/tools/autoconf
+4.0K	./pkg/devel/tools/automake/automake-1.10.1-1.xml
+4.0K	./pkg/devel/tools/automake
+8.0K	./pkg/devel/tools
+ 12K	./pkg/devel
+8.0K	./pkg/system/shells/bash/bash-3.2-1.xml
+8.0K	./pkg/system/shells/bash
+8.0K	./pkg/system/shells
+8.0K	./pkg/system
+ 20K	./pkg
+4.0K	./README
+ 12K	./source/__init__.py
+4.0K	./source/apkg
+8.0K	./source/archiver.py
+4.0K	./source/export/__init__.py
+4.0K	./source/export/raw.py
+8.0K	./source/export/rpm.py
+4.0K	./source/export/sh.py
+4.0K	./source/export/xml.py
+ 24K	./source/export
+4.0K	./source/gui/xmlEditor/xmlEditor.xcfg
+4.0K	./source/gui/xmlEditor/xmlEditor.xrc
+8.0K	./source/gui/xmlEditor/xmlEditor_xrc.py
+ 16K	./source/gui/xmlEditor
+ 16K	./source/gui
+4.0K	./source/heuristics/__init__.py
+ 32K	./source/heuristics/automake.py
+4.0K	./source/heuristics/perl.py
+4.0K	./source/heuristics/python.py
+ 44K	./source/heuristics
+4.0K	./source/log.conf
+4.0K	./source/log.py
+4.0K	./source/parser/__init__.py
+ 20K	./source/parser/deprecated/first_xmlControlParser.py
+ 20K	./source/parser/deprecated/second_xmlControlParser.py
+ 40K	./source/parser/deprecated
+ 24K	./source/parser/reader.py
+4.0K	./source/parser/writer.py
+ 72K	./source/parser
+4.0K	./source/resources/__init__.py
+8.0K	./source/resources/ftp.py
+8.0K	./source/resources/http.py
+ 20K	./source/resources
+208K	./source
+4.0K	./THANKS
+336K	.

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<pkgManifest>
+	<descriptor for="self" type="source">
+		<formal>
+			<name>autoconf</name>
+			<version>2.62</version>
+			<revision>1</revision>
+			<architecture>x86</architecture>
+			<category>
+				<major>devel</major>
+				<minor>tools</minor>
+			</category>
+		</formal>
+		<dependency> 
+			<build>
+				<pkg name="awk" />
+				<pkg name="bash" />
+				<pkg name="diffutils" />
+				<pkg name="grep" />
+				<pkg name="m4" />
+				<pkg name="make" />
+				<pkg name="sed" />
+				<pkg name="texinfo" />
+			</build>
+		</dependency>
+		<information>
+			<homepage>http://www.gnu.org/software/autoconf</homepage>
+			<license>GPL2</license>
+			<maintainer>Andrei Oprisan</maintainer>
+			<email>andrei@apkg.org</email>
+			<summary>GNU tool for automatically configuring source code</summary>
+			<description>Autoconf is an extensible package of m4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the package to many kinds of UNIX-like systems without manual user intervention.</description>
+		</information>
+	</descriptor>
+	<build>
+		<resource protocol="ftp" server="ftp.gnu.org" root="gnu/autoconf">
+			<archive>
+				<file md5="6c1f3b3734999035d77da5024aab4fbd">autoconf-2.62.tar.gz</file>
+			</archive>
+		</resource>		
+	</build>
+</pkgManifest>

@@ -1,0 +1,21 @@
+apkg THANKS file
+ 
+apkg was originally written by Andrei Oprisan.  It would
+not be what it is today without the invaluable help of 
+Stanislav Brabec and Michal Vyskocil, who have reported problems, 
+suggested improvements, or submitted actual code. 
+Also, without the Google Summer of Code program, this project most
+likely would not have been developed and grown, and we hope
+that it will continue to grow and expand. 
+
+========================================================================
+
+Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
+Free Software Foundation, Inc.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+Texts.  A copy of the license is included in the ``GNU Free
+Documentation License'' file as part of this distribution.

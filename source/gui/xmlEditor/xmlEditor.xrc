@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource>
+  <object class="wxFrame" name="MAINFRAME">
+    <title>apkg - XML builder (1.0)</title>
+    <centered>1</centered>
+    <pos>1,1</pos>
+    <size>640,800</size>
+    <style>wxDEFAULT_FRAME_STYLE|wxCAPTION|wxSTAY_ON_TOP|wxMAXIMIZE_BOX|wxTAB_TRAVERSAL</style>
+    <enabled>1</enabled>
+    <tooltip>This tool can help you create/modify a build control XML file.</tooltip>
+    <object class="wxNotebook" name="rwqer"> 
+      <pos>200,300</pos>
+      <size>400,300</size>
+      <object class="notebookpage">
+        <label>Information</label>
+        <object class="wxPanel" name="InformationPanel">
+          <object class="wxStaticText" name="InfoText1">
+            <label>namesdf</label>
+            <pos>50,50</pos>
+            <size>150,150</size>
+            <enabled>1</enabled>
+            <focused>1</focused>
+          </object>
+        </object>
+        <selected>1</selected>
+      </object>
+      <object class="notebookpage">
+        <label>Build</label>
+        <object class="wxPanel" name="BuildPanel"/>
+        <selected>0</selected>
+      </object>
+    </object>
+    <object class="wxMenuBar" name="fsa">
+      <style></style>
+      <fg>#FFFFFF</fg>
+      <bg>#FFFFFF</bg>
+      <object class="wxMenu" name="FileMenu">
+        <label>File</label>
+        <object class="wxMenuItem" name="FileNew">
+          <label>New</label>
+        </object>
+        <object class="wxMenuItem" name="FileOpen">
+          <label>Open</label>
+        </object>
+        <object class="wxMenuItem" name="FileSave">
+          <label>Save</label>
+        </object>
+        <object class="separator"/>
+        <object class="wxMenuItem" name="FileQuit">
+          <label>Quit</label>
+        </object>
+      </object>
+      <object class="wxMenu" name="DocumentationMenu">
+        <label>Documentation</label>
+        <help></help>
+      </object>
+      <object class="wxMenu" name="HelpMenu">
+        <label>Help</label>
+        <object class="wxMenuItem" name="HelpAbout">
+          <label>About</label>
+        </object>
+      </object>
+    </object>
+  </object>
+</resource>

@@ -1,0 +1,7 @@
+#!/bin/sh
+# apkg.py -- abstract package tree
+# Copyright 2008 apkg.org
+# Distributed under the terms of the GNU General Public License v2
+
+# Wrapper for python call to apkg 
+/usr/bin/python __init__.py $* 

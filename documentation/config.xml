@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<pkgManifest>
+	<descriptor for="self" type="source">
+		<formal>
+			<name>bash</name>
+			<version>3.2</version>
+			<revision>1</revision>
+		</formal>		 
+		<information>
+			<homepage>http://www.gnu.org/software/bash</homepage>
+			<license>GPL2</license>
+			<summary>The GNU Bourne Again shell is a shell or command language interpreter that is compatible with the Bourne shell (sh)</summary>
+			<description>Bash incorporates useful features from the Korn shell (ksh) and the C shell (csh). Most sh scripts can be run by bash without modification. This package (bash) contains bash version 3.2, which improves POSIX compliance over previous versions.</description>
+		</information>
+		<distribution>
+			<name>openSUSE</name>
+			<version>11.0</version>
+			<maintainer>
+				<name>Andrei Oprisan</name>
+				<email>andrei@apkg.org</email>
+			</maintainer>	
+			<category>
+				<major>system</major>
+				<minor>shell</minor>
+			</category>
+			<architecture>x86</architecture>
+			<dependency>				
+				<run>
+					<pkg>
+						<name>apkg</name>
+						<operand>ge</operand>
+						<version>0.0.1</version>
+						<revision>1</revision>
+					</pkg>
+				</run>
+				<build>
+					<pkg>
+						<name>gcc</name>
+						<operand>ge</operand>
+						<version>3.0</version>
+						<revision>1</revision>						
+					</pkg>
+					<pkg>
+						<name>make</name>
+						<operand>ge</operand>
+						<version>3.5</version>
+						<revision>1</revision>						
+					</pkg>
+				</build>
+			</dependency>
+		</distribution>			
+	</descriptor>
+	<build>
+		<resource protocol="ftp" server="ftp.gnu.org" root="gnu/bash">
+			<archive>
+				<file md5="00bfa16d58e034e3c2aa27f390390d30">bash-3.2.tar.gz</file>
+			</archive>
+			<patch level="39" location="bash-3.2-patches">
+				<file md5="d8e10c754f477e3f3a581af566b89301">bash32-001</file>
+			</patch>
+		</resource>		
+	</build>
+</pkgManifest>
+

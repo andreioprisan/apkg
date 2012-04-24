@@ -1,0 +1,400 @@
+$ ./apkg --config=../pkg/devel/tools/autoconf/autoconf-2.62-1.xml --export=autoconf-2.62-1.sh --export-type=sh
+using file: ../pkg/devel/tools/autoconf/autoconf-2.62-1.xml
+(0): apkg initialization
+ 1:   loading modules
+       task started on 0.055298
+       task ended on   0.058151
+ 1:   completed
+ 2:   checking environment
+       task started on 0.058348
+       task ended on   0.058415
+ 2:   completed
+ 2:   reading XML file 0.0642
+       task started on 0.064334
+       task ended on 0.068722 
+ 2:   read XML file 0.068852
+(1): build
+ 1:   creating environment
+       task started on 0.06917
+       task ended on   0.069636
+ 1:   completed
+ 2:   download resources
+       task started on 0.076652
+        file: autoconf-2.62.tar.gz 
+         size: 1482Kb (1518427 bytes)
+         process: [0  10  20  30  40  50  60  70  80  90  100]
+         MD5: verified
+       task ended on   0.260343
+ 2:   completed
+ 3:   extracting source tarballs
+       task started on   0.260877
+      extracting autoconf-2.62.tar.gz
+      (R): tar -xzf /var/tmp/apkg-16232/autoconf-2.62.tar.gz --directory=/var/tmp/apkg-16232/src
+       task started on   0.261346
+        heuristic: Run suggested command? (Y/N): y
+       task ended on   0.263498
+      (R): success
+       task started on   0.264129
+ 3:   completed
+ 4:   heuristic build 
+       task started on   0.264483
+      found heuristic module "automake"
+       self-check: checking if heuristic is appropriate for this package
+        checking: /var/tmp/apkg-16232/src/autoconf-2.62
+        found ./configure
+       commencing package build with heuristic "automake"
+        task started on   0.271798
+  building in /var/tmp/apkg-16232/src/autoconf-2.62
+  (R): parsing ./configure 
+        heuristic [automake]: automatic parse of ./configure options
+        heuristic [automake]: fine tuning installation directories
+        heuristic [automake]: [default=/usr]: --prefix=
+        heuristic [automake]: user executables [EPREFIX/bin]: --bindir=
+        heuristic [automake]: system admin executables [EPREFIX/sbin]: --sbindir=
+        heuristic [automake]: program executables [EPREFIX/libexec]: --libexecdir=
+        heuristic [automake]: read-only architecture-independent data [DATAROOTDIR]: --datadir=
+        heuristic [automake]: read-only single-machine data [PREFIX/etc]: --sysconfdir=
+        heuristic [automake]: modifiable architecture-independent data [PREFIX/com]: --sharedstatedir=
+        heuristic [automake]: modifiable single-machine data [PREFIX/var]: --localstatedir=
+        heuristic [automake]: object code libraries [EPREFIX/lib]: --libdir=
+        heuristic [automake]: C header files [PREFIX/include]: --includedir=
+        heuristic [automake]: C header files for non-gcc [/usr/include]: --oldincludedir=
+        heuristic [automake]: info documentation [DATAROOTDIR/info]: --infodir=
+        heuristic [automake]: man documentation [DATAROOTDIR/man]: --mandir=
+        heuristic [automake]: parsing --enable flags
+        heuristic [automake]: parsing --disable flags
+        heuristic [automake]: parsing --with flags
+        heuristic [automake]: with package 'lispdir' (override the default lisp directory)? (y/n): n
+        heuristic [automake]: without package 'lispdir'
+        heuristic [automake]: parsing --without flags
+  (R): ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/libexec --datadir=/usr/share --sysconfdir=/usr/etc --sharedstatedir=/usr/com --localstatedir=/usr/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/info --mandir=/usr/man --without-lispdir 
+        heuristic [automake]: Run suggested command? (Y/N): y
+----------------------------------------
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether /bin/sh -n is known to work... yes
+checking for expr... /bin/expr
+checking for GNU M4 that supports accurate traces... /usr/bin/m4
+checking how m4 supports trace files... --error-output
+checking for perl... /usr/bin/perl
+checking for emacs... emacs
+checking whether emacs is sufficiently recent... yes
+checking for emacs... emacs
+checking where .elc files should go... no
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for a sed that does not truncate output... /usr/bin/sed
+configure: creating ./config.status
+config.status: creating tests/Makefile
+config.status: creating tests/atlocal
+config.status: creating man/Makefile
+config.status: creating lib/emacs/Makefile
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/Autom4te/Makefile
+config.status: creating lib/autoscan/Makefile
+config.status: creating lib/m4sugar/Makefile
+config.status: creating lib/autoconf/Makefile
+config.status: creating lib/autotest/Makefile
+config.status: creating bin/Makefile
+config.status: WARNING: not linking GNUmakefile to itself
+config.status: executing tests/atconfig commands
+----------------------------------------
+  (R): make
+        heuristic [automake]: Run suggested command? (Y/N): y
+----------------------------------------
+make  all-recursive
+Making all in bin
+rm -f autom4te autom4te.tmp
+srcdir=''; \
+	  test -f ./autom4te.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autom4te.in; do not edit by hand.|g' ${srcdir}autom4te.in >autom4te.tmp
+chmod +x autom4te.tmp
+chmod a-w autom4te.tmp
+mv autom4te.tmp autom4te
+cd ../lib && make  autom4te.cfg
+rm -f autom4te.cfg autom4te.tmp
+sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@AWK[@]|awk|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' ./autom4te.in >autom4te.tmp
+chmod a-w autom4te.tmp
+mv autom4te.tmp autom4te.cfg
+cd ../lib/m4sugar && make  version.m4
+:;{ \
+	  echo '# This file is part of -*- Autoconf -*-.' && \
+	  echo '# Version of Autoconf.' && \
+	  echo '# Copyright (C) 1999, 2000, 2001, 2002, 2006, 2007' && \
+	  echo '# Free Software Foundation, Inc.' && \
+	  echo  &&\
+	  echo 'm4_define([m4_PACKAGE_NAME],      [GNU Autoconf])' && \
+	  echo 'm4_define([m4_PACKAGE_TARNAME],   [autoconf])' && \
+	  echo 'm4_define([m4_PACKAGE_VERSION],   [2.62])' && \
+	  echo 'm4_define([m4_PACKAGE_STRING],    [GNU Autoconf 2.62])' && \
+	  echo 'm4_define([m4_PACKAGE_BUGREPORT], [bug-autoconf@gnu.org])'; \
+	} > version.m4-t
+mv version.m4-t version.m4
+autom4te_perllibdir='..'/lib AUTOM4TE_CFG='../lib/autom4te.cfg'         ../bin/autom4te -B '..'/lib -B '..'/lib         --language M4sh --cache '' --melt ./autoconf.as -o autoconf.in
+rm -f autoconf autoconf.tmp
+srcdir=''; \
+	  test -f ./autoconf.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autoconf.in; do not edit by hand.|g' ${srcdir}autoconf.in >autoconf.tmp
+chmod +x autoconf.tmp
+chmod a-w autoconf.tmp
+mv autoconf.tmp autoconf
+rm -f autoheader autoheader.tmp
+srcdir=''; \
+	  test -f ./autoheader.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autoheader.in; do not edit by hand.|g' ${srcdir}autoheader.in >autoheader.tmp
+chmod +x autoheader.tmp
+chmod a-w autoheader.tmp
+mv autoheader.tmp autoheader
+rm -f autoreconf autoreconf.tmp
+srcdir=''; \
+	  test -f ./autoreconf.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autoreconf.in; do not edit by hand.|g' ${srcdir}autoreconf.in >autoreconf.tmp
+chmod +x autoreconf.tmp
+chmod a-w autoreconf.tmp
+mv autoreconf.tmp autoreconf
+rm -f ifnames ifnames.tmp
+srcdir=''; \
+	  test -f ./ifnames.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from ifnames.in; do not edit by hand.|g' ${srcdir}ifnames.in >ifnames.tmp
+chmod +x ifnames.tmp
+chmod a-w ifnames.tmp
+mv ifnames.tmp ifnames
+rm -f autoscan autoscan.tmp
+srcdir=''; \
+	  test -f ./autoscan.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autoscan.in; do not edit by hand.|g' ${srcdir}autoscan.in >autoscan.tmp
+chmod +x autoscan.tmp
+chmod a-w autoscan.tmp
+mv autoscan.tmp autoscan
+rm -f autoupdate autoupdate.tmp
+srcdir=''; \
+	  test -f ./autoupdate.in || srcdir=./; \
+	  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@datadir[@]|/usr/share/autoconf|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's,x,x,'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's,x,x,'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's,x,x,'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--error-output|g' -e 's|@AWK[@]|awk|g' -e 's|@RELEASE_YEAR[@]|'`sed 's/^\([0-9][0-9][0-9][0-9]\).*/\1/;q' ../ChangeLog`'|g' -e 's|@VERSION[@]|2.62|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from autoupdate.in; do not edit by hand.|g' ${srcdir}autoupdate.in >autoupdate.tmp
+chmod +x autoupdate.tmp
+chmod a-w autoupdate.tmp
+mv autoupdate.tmp autoupdate
+Making all in .
+make[2]: Nothing to be done for `all-am'.
+Making all in lib
+Making all in Autom4te
+make[3]: Nothing to be done for `all'.
+Making all in m4sugar
+autom4te_perllibdir='../..'/lib AUTOM4TE_CFG='../../lib/autom4te.cfg'         ../../bin/autom4te -B '../..'/lib -B '../..'/lib        				\
+		--language=m4sugar			\
+		--freeze			\
+		--output=m4sugar.m4f
+autom4te_perllibdir='../..'/lib AUTOM4TE_CFG='../../lib/autom4te.cfg'         ../../bin/autom4te -B '../..'/lib -B '../..'/lib        				\
+		--language=m4sh			\
+		--freeze			\
+		--output=m4sh.m4f
+Making all in autoconf
+autom4te_perllibdir='../..'/lib AUTOM4TE_CFG='../../lib/autom4te.cfg'         ../../bin/autom4te -B '../..'/lib -B '../..'/lib        				\
+		--language=autoconf			\
+		--freeze			\
+		--output=autoconf.m4f
+Making all in autotest
+autom4te_perllibdir='../..'/lib AUTOM4TE_CFG='../../lib/autom4te.cfg'         ../../bin/autom4te -B '../..'/lib -B '../..'/lib        				\
+		--language=autotest			\
+		--freeze			\
+		--output=autotest.m4f
+Making all in autoscan
+echo '# Automatically Generated: do not edit this file' >autoscan.list
+sed '/^[#]/!q' ./autoscan.pre                  >>autoscan.list
+( \
+	  sed -n '/^[^#]/p' ./autoscan.pre; \
+	  autom4te_perllibdir='../..'/lib AUTOM4TE_CFG='../../lib/autom4te.cfg'         ../../bin/autom4te -B '../..'/lib -B '../..'/lib         --cache '' -M -l autoconf -t'AN_OUTPUT:$1: $2		$3' \
+	) | LC_ALL=C sort                                      >>autoscan.list
+Making all in emacs
+WARNING: Warnings can be ignored. :-)
+if test "emacs" != no; then \
+	  set x; \
+	  list='autoconf-mode.el autotest-mode.el'; for p in $list; do \
+	    if test -f "$p"; then d=; else d="./"; fi; \
+	    set x "$@" "$d$p"; shift; \
+	  done; \
+	  shift; \
+	  EMACS="emacs" /bin/sh ../../build-aux/elisp-comp "$@" || exit 1; \
+	else : ; fi
+Wrote /private/var/tmp/apkg-16232/src/autoconf-2.62/lib/emacs/elc.17210/autoconf-mode.elc
+Wrote /private/var/tmp/apkg-16232/src/autoconf-2.62/lib/emacs/elc.17210/autotest-mode.elc
+make[3]: Nothing to be done for `all-am'.
+Making all in doc
+make[2]: Nothing to be done for `all'.
+Making all in tests
+autom4te_perllibdir='..'/lib AUTOM4TE_CFG='../lib/autom4te.cfg'         ../bin/autom4te -B '..'/lib -B '..'/lib         --language=M4sh ./wrapper.as -o wrapper.in
+rm -f autoconf autoconf.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autoconf|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autoconf.tmp
+chmod +x autoconf.tmp
+chmod a-w autoconf.tmp
+mv -f autoconf.tmp autoconf
+rm -f autoheader autoheader.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autoheader|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autoheader.tmp
+chmod +x autoheader.tmp
+chmod a-w autoheader.tmp
+mv -f autoheader.tmp autoheader
+rm -f autom4te autom4te.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autom4te|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autom4te.tmp
+chmod +x autom4te.tmp
+chmod a-w autom4te.tmp
+mv -f autom4te.tmp autom4te
+rm -f autoreconf autoreconf.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autoreconf|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autoreconf.tmp
+chmod +x autoreconf.tmp
+chmod a-w autoreconf.tmp
+mv -f autoreconf.tmp autoreconf
+rm -f autoscan autoscan.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autoscan|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autoscan.tmp
+chmod +x autoscan.tmp
+chmod a-w autoscan.tmp
+mv -f autoscan.tmp autoscan
+rm -f autoupdate autoupdate.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|autoupdate|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >autoupdate.tmp
+chmod +x autoupdate.tmp
+chmod a-w autoupdate.tmp
+mv -f autoupdate.tmp autoupdate
+rm -f ifnames ifnames.tmp
+input=wrapper.in; \
+	sed -e 's|@wrap_program[@]|ifnames|g' -e 's|@abs_top_srcdir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e 's|@abs_top_builddir[@]|/private/var/tmp/apkg-16232/src/autoconf-2.62|g' -e "s|@configure_input[@]|Generated from $input.|g" wrapper.in >ifnames.tmp
+chmod +x ifnames.tmp
+chmod a-w ifnames.tmp
+mv -f ifnames.tmp ifnames
+Making all in man
+make[2]: Nothing to be done for `all'.
+----------------------------------------
+  (R): success
+  (R): make DESTDIR=/var/tmp/apkg-16232/bin install
+        heuristic [automake]: Run suggested command? (Y/N): y
+----------------------------------------
+make  install-recursive
+Making install in bin
+test -z "/usr/bin" || ../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/bin"
+ /usr/bin/install -c 'autom4te' '/var/tmp/apkg-16232/bin/usr/bin/autom4te'
+ /usr/bin/install -c 'autoconf' '/var/tmp/apkg-16232/bin/usr/bin/autoconf'
+ /usr/bin/install -c 'autoheader' '/var/tmp/apkg-16232/bin/usr/bin/autoheader'
+ /usr/bin/install -c 'autoreconf' '/var/tmp/apkg-16232/bin/usr/bin/autoreconf'
+ /usr/bin/install -c 'ifnames' '/var/tmp/apkg-16232/bin/usr/bin/ifnames'
+ /usr/bin/install -c 'autoscan' '/var/tmp/apkg-16232/bin/usr/bin/autoscan'
+ /usr/bin/install -c 'autoupdate' '/var/tmp/apkg-16232/bin/usr/bin/autoupdate'
+make[3]: Nothing to be done for `install-data-am'.
+Making install in .
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf" || build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf"
+ /usr/bin/install -c -m 644 './INSTALL' '/var/tmp/apkg-16232/bin/usr/share/autoconf/INSTALL'
+Making install in lib
+Making install in Autom4te
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf/Autom4te" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te"
+ /usr/bin/install -c -m 644 'C4che.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/C4che.pm'
+ /usr/bin/install -c -m 644 'ChannelDefs.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/ChannelDefs.pm'
+ /usr/bin/install -c -m 644 'Channels.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/Channels.pm'
+ /usr/bin/install -c -m 644 'Configure_ac.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/Configure_ac.pm'
+ /usr/bin/install -c -m 644 'FileUtils.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/FileUtils.pm'
+ /usr/bin/install -c -m 644 'General.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/General.pm'
+ /usr/bin/install -c -m 644 'Request.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/Request.pm'
+ /usr/bin/install -c -m 644 'Struct.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/Struct.pm'
+ /usr/bin/install -c -m 644 'XFile.pm' '/var/tmp/apkg-16232/bin/usr/share/autoconf/Autom4te/XFile.pm'
+Making install in m4sugar
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf/m4sugar" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar"
+ /usr/bin/install -c -m 644 'm4sugar.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar/m4sugar.m4'
+ /usr/bin/install -c -m 644 'm4sh.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar/m4sh.m4'
+test -z "/usr/share/autoconf/m4sugar" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar"
+ /usr/bin/install -c -m 644 'version.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar/version.m4'
+ /usr/bin/install -c -m 644 'm4sugar.m4f' '/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar/m4sugar.m4f'
+ /usr/bin/install -c -m 644 'm4sh.m4f' '/var/tmp/apkg-16232/bin/usr/share/autoconf/m4sugar/m4sh.m4f'
+Making install in autoconf
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf/autoconf" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf"
+ /usr/bin/install -c -m 644 'autoconf.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autoconf.m4'
+ /usr/bin/install -c -m 644 'general.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/general.m4'
+ /usr/bin/install -c -m 644 'status.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/status.m4'
+ /usr/bin/install -c -m 644 'oldnames.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/oldnames.m4'
+ /usr/bin/install -c -m 644 'specific.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/specific.m4'
+ /usr/bin/install -c -m 644 'autoheader.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autoheader.m4'
+ /usr/bin/install -c -m 644 'autoupdate.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autoupdate.m4'
+ /usr/bin/install -c -m 644 'autotest.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autotest.m4'
+ /usr/bin/install -c -m 644 'autoscan.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autoscan.m4'
+ /usr/bin/install -c -m 644 'lang.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/lang.m4'
+ /usr/bin/install -c -m 644 'c.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/c.m4'
+ /usr/bin/install -c -m 644 'erlang.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/erlang.m4'
+ /usr/bin/install -c -m 644 'fortran.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/fortran.m4'
+ /usr/bin/install -c -m 644 'functions.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/functions.m4'
+ /usr/bin/install -c -m 644 'headers.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/headers.m4'
+ /usr/bin/install -c -m 644 'types.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/types.m4'
+ /usr/bin/install -c -m 644 'libs.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/libs.m4'
+ /usr/bin/install -c -m 644 'programs.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/programs.m4'
+test -z "/usr/share/autoconf/autoconf" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf"
+ /usr/bin/install -c -m 644 'autoconf.m4f' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoconf/autoconf.m4f'
+Making install in autotest
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf/autotest" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/autotest"
+ /usr/bin/install -c -m 644 'autotest.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autotest/autotest.m4'
+ /usr/bin/install -c -m 644 'general.m4' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autotest/general.m4'
+test -z "/usr/share/autoconf/autotest" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/autotest"
+ /usr/bin/install -c -m 644 'autotest.m4f' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autotest/autotest.m4f'
+Making install in autoscan
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf/autoscan" || ../../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf/autoscan"
+ /usr/bin/install -c -m 644 'autoscan.list' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autoscan/autoscan.list'
+Making install in emacs
+make[4]: Nothing to be done for `install-exec-am'.
+ /usr/bin/install -c -m 644 'autoconf-mode.el' '/var/tmp/apkg-16232/binno/autoconf-mode.el'
+ /usr/bin/install -c -m 644 'autoconf-mode.elc' '/var/tmp/apkg-16232/binno/autoconf-mode.elc'
+ /usr/bin/install -c -m 644 'autotest-mode.el' '/var/tmp/apkg-16232/binno/autotest-mode.el'
+ /usr/bin/install -c -m 644 'autotest-mode.elc' '/var/tmp/apkg-16232/binno/autotest-mode.elc'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/autoconf" || ../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/share/autoconf"
+ /usr/bin/install -c -m 644 'autom4te.cfg' '/var/tmp/apkg-16232/bin/usr/share/autoconf/autom4te.cfg'
+Making install in doc
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/usr/info" || ../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/info"
+ /usr/bin/install -c -m 644 './autoconf.info' '/var/tmp/apkg-16232/bin/usr/info/autoconf.info'
+ /usr/bin/install -c -m 644 './standards.info' '/var/tmp/apkg-16232/bin/usr/info/standards.info'
+ install-info --info-dir='/var/tmp/apkg-16232/bin/usr/info' '/var/tmp/apkg-16232/bin/usr/info/autoconf.info'
+ install-info --info-dir='/var/tmp/apkg-16232/bin/usr/info' '/var/tmp/apkg-16232/bin/usr/info/standards.info'
+Making install in tests
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+Making install in man
+make[3]: Nothing to be done for `install-exec-am'.
+test -z "/usr/man/man1" || ../build-aux/install-sh -c -d "/var/tmp/apkg-16232/bin/usr/man/man1"
+ /usr/bin/install -c -m 644 '././autoconf.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autoconf.1'
+ /usr/bin/install -c -m 644 '././autoheader.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autoheader.1'
+ /usr/bin/install -c -m 644 '././autom4te.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autom4te.1'
+ /usr/bin/install -c -m 644 '././autoreconf.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autoreconf.1'
+ /usr/bin/install -c -m 644 '././autoscan.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autoscan.1'
+ /usr/bin/install -c -m 644 '././autoupdate.1' '/var/tmp/apkg-16232/bin/usr/man/man1/autoupdate.1'
+ /usr/bin/install -c -m 644 '././ifnames.1' '/var/tmp/apkg-16232/bin/usr/man/man1/ifnames.1'
+ /usr/bin/install -c -m 644 '././config.guess.1' '/var/tmp/apkg-16232/bin/usr/man/man1/config.guess.1'
+ /usr/bin/install -c -m 644 '././config.sub.1' '/var/tmp/apkg-16232/bin/usr/man/man1/config.sub.1'
+----------------------------------------
+  (R): success
+      building package archive
+      (R): tar cjf /root/workspace/apkg/source/autoconf-2.62-1.x86.tar.bz2 *
+       task started on   0.420259
+       task ended on   0.421782
+      (R): success
+ 5:   export build resources
+       task started on 0.424766
+       task ended on   0.425914
+ 5:   completed
+ 6:   cleanup
+      (R): rm -fr /var/tmp/apkg-16232
+       task started on 0.426349
+       task ended on   0.427828
+      (R): success
+      

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<pkgManifest>
+	<descriptor for="self" type="source">
+		<formal>
+			<name>bin86</name>
+			<version>0.16.17</version>
+			<revision>1</revision>
+		</formal>
+		<information> 
+			<homepage>http://www.cix.co.uk/~mayday/</homepage>
+			<license>GPL2</license>
+			<maintainer>Andrei Oprisan</maintainer>
+			<email>andrei@apkg.org</email>
+			<summary></summary>
+			<description></description>
+		</information>
+		<distribution>
+			<name>openSUSE</name>
+			<version>11.0</version>
+			<maintainer>
+				<name>Andrei Oprisan</name>
+				<email>andrei@apkg.org</email>
+			</maintainer>	
+			<category>
+				<major>devel</major>
+				<minor>languages</minor>
+			</category>
+			<architecture>x86</architecture>
+			<dependency>
+				<run>
+					<pkg>
+						<name>apkg</name>
+						<version compare="ge">0.0.1</version>
+					</pkg>
+				</run>
+				<build>
+					<pkg>
+						<name>gcc</name>
+						<version compare="eq">3.0</version>
+					</pkg>
+					<pkg>
+						<name>make</name>
+						<version compare="ge">3.5</version>
+					</pkg>
+				</build>
+			</dependency>
+		</distribution>
+	</descriptor>
+	<build>
+		<resource protocol="http" server="homepage.ntlworld.com" root="robert.debath/dev86">
+			<archive>
+				<file md5="c9e8d72dd2e7457b52d0e3164fc199a1">bin86-0.16.17.tar.gz</file>
+			</archive>
+		</resource>		
+		<execute>
+			<gnuconfig prefix="/usr">
+				<param>--with-curses</param>
+				<param>--enable-readline</param>
+				<param>--without-bash-malloc</param>
+				<param>--bindir=/bin</param>
+			</gnuconfig>
+			<make prefix="/usr" />
+			<mkdir base="DESTDIR">
+				<dir>usr/bin</dir>
+				<dir>usr/man/man1</dir>
+			</mkdir>
+			<rm>
+				<loc>usr/bin/a</loc>
+				<loc>usr/sbin</loc>
+			</rm>
+			<make prefix="usr" stage="install" base="DESTDIR" />
+			<ls>fdsafd</ls>
+		</execute>
+	</build>
+</pkgManifest>

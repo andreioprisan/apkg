@@ -1,0 +1,35 @@
+-*- text -*-
+  
+/======\
+| apkg |=> an abstract package tree creation tool
+\======/
+
+Born as part of a Google Summer of Code 2008 project, apkg is a dynamic source analysis and distribution tool.
+apkg includes an extensible XML parser and heuristic model for source tree self-analysis. 
+Successful build results can be exported to RPM spec files, shell scripts, or raw data. 
+
+The 1.0 release will also include full XML back-export (export results to original configuration file),
+as well as cross-platform GUI XML configuration file editing.
+ 
+DOWNLOAD 
+
+http://www.apkg.org/releases
+
+Please note that any release prior to 1.0 will be extremely buggy and you
+will use this tool at your own risk.
+
+BUGS
+
+Mail bugs to bugs@apkg.org, report bugs to
+http://www.apkg.org/bugtrack.
+
+LICENSING
+
+apkg is released under the MIT license.
+
+Additionally, apkg may include licensing exception in some of its
+source files (heuristics), as contributors modify and distribute their
+costom interpreters.
+
+
+ 

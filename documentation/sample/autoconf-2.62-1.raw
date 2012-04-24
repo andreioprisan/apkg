@@ -1,0 +1,12 @@
+pkgDescriptorInformation: {'homepage': u'http://www.gnu.org/software/autoconf', 'description': u'Autoconf is an extensible package of m4 macros that produce shell scripts to automatically configure software source code packages. These scripts can adapt the package to many kinds of UNIX-like systems without manual user intervention.', 'license': u'GPL2', 'summary': u'GNU tool for automatically configuring source code'}
+pkgDescriptorDistribution: {'categoryMajor': '', 'distributionName': '', 'maintainerName': '', 'distributionVersion': '', 'maintainerEmail': '', 'categoryMinor': '', 'architecture': ''}
+pkgBuildResourceInformation: {'root': u'gnu/autoconf', 'protocol': u'ftp', 'location': '', 'patchLevel': '', 'server': u'ftp.gnu.org'}
+pkgDescriptorFormal: {'pkgVersion': u'2.62', 'pkgRevision': u'1', 'pkgName': u'autoconf'}
+pkgBuildExecute: {}
+pkgBuildEnvironment: {}
+pkgDescriptorDistributionDependencyBuild: {'pkgVersionOperand': [], 'pkgVersion': [], 'pkgRevision': [], 'pkgName': []}
+pkgBuildResourceFiles: {'type': ['archive'], 'file': [u'autoconf-2.62.tar.gz'], 'md5': [u'6c1f3b3734999035d77da5024aab4fbd']}
+pkgDescriptorDistributionDependencyRun: {'pkgVersionOperand': [], 'pkgVersion': [], 'pkgRevision': [], 'pkgName': []}
+run: ./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/libexec --datadir=/usr/share --sysconfdir=/usr/etc --sharedstatedir=/usr/com --localstatedir=/usr/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/info --mandir=/usr/man --with-lispdir=yes  
+run: make
+run: make DESTDIR=$TMP install

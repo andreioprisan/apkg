@@ -1,0 +1,91 @@
+Version 0.8
+ 1. minidom XML writer for writeback to initial configuration file
+ 
+** GSOC DEADLINE **
+** FUTURE IMPROVEMENTS ARE PAST GSOC
+
+Version 0.7
+ 1. crossplatform GUI xml editor (incomplete)
+
+Version 0.6
+ 1. export build data as RPM build spec file
+ 2. export build data as raw data file
+ 3. export build data as shell script
+ 3. todo: finish up XML writer so that build data can be submitted as XMLs
+
+Version 0.5
+ 1. parser extracts commands/variables for heuristics from config
+ 2. heuristics: automake: build steps
+ 3. heuristics: automake: ask whether or not to run each command
+ 3. heuristics: automake: package archive completion from complete build 
+
+Version 0.4
+ 1. heuristics: automake: step-by-step prompting for features, packages, and tuning variables
+ 2. heuristics: automake: easier to extend and very clear how it works
+ 3. heuristics: automake: todo: make more functions to clean up code
+
+Version 0.3
+ 1. improved ftp/http clients with the new parser
+ 2. heuristic prompting for file downloads
+ 3. downloading patches works correcly
+ 
+Version 0.2
+ 1. (new) and much more efficient and extensible XML parser
+ 2. modified config layout should be clearer now
+ 3. adding/modifying tags in the parser now only requires only delaring the global schema for the array and adding the necessary tag/parameter name boolean variables
+ 4. both parameters and tags work correctly
+
+Version 0.1.2
+ 1. distribution specific XML tagging
+
+Version 0.1.1
+ 1. parser: new parser replaces old parser (too slow and buggy, plus it became almost impossible to maintain - very bad sign - rewrite needed)
+ 		    should be more extensible to rewrite XMLs (TODO: actually make it work, it hangs due to errors now)
+ 		    
+Version 0.1
+ 1. WEBPKGDB: interface to build XML control files
+ 2. WEBPKGDB: package database scheme set up
+ 3. WEBPKGDB: authentication to upload control files through database and build results
+ 4. WEBPKGDB: query interface to commandline query access
+ 5. TODO (Uncommitted DTB: 4 - MAIN): query interface to db for control files
+ 6. TODO (Uncommitted DTB: 4 - MAIN): more command line argument parsing options
+ 7. HEURISTICS: on-the-fly command output supported (delayed after completion also available in comments)
+ 8. TODO (Uncommitted DTB: 7): implement option for delayed after completion command output
+ 9. HEURISTICS: AUTOMAKE: improvements and code cleanup
+ 12. ARCHIVE: archiving and unarchiving parser
+ 13. LOG: all output goes through the logger (easier to separate output/debug information later and ensure program continuation)
+ 14. ALL: all prints replaces in favor of python logger scheme logger
+ 15. APKG: shell wrapper to call source/__init__.py with python
+ 16. WEB: over 20 packages are available 
+
+Version 0.0.4
+ 1. MAIN: command line argument parser
+ 2. MAIN: heuristics support
+ 3. HEURISTICS: automake, perl, and python
+ 4. HEURISTICS: dynamic heuristics set up the right way (finally!) through heuristics/__init__.py controller
+ 5. HEURISTICS: AUTOMAKE: support 
+
+Version 0.0.3
+ 1. MAIN: split XML And FTP in proper modules and using object attributes as needed
+ 2. XML: OOP classes now used
+ 3. XML: parsed for build environment options 
+ 4. (TODO 2) XML: parse for full build commands   
+ 5. FTP: OOP classes now used
+ 6. FTP: can get patches as well as archives 
+
+Version 0.0.2
+ 1. MAIN: environment setup and cleanup based on apkg's pid
+ 2. XML:	also provides resources to be downloaded
+ 3. XML: resource hashes added for verification purposes
+ 4. FTP: resources placed in the process's work folder
+ 5. FTP: progress bar with md5 hash verification and disk write verification (binary only)
+ 6. MD5: md5 function that reads file into smaller buffers, as opposed to one big file 
+ 7. (TODO 1) FTP: provide the same for patches and other ascii files, not just binary
+ 
+Version 0.0.1
+ 1. Initial Code Commit
+ 2. XML: parser and sample package manifest files created
+ 3. XML: proper element, attribute, and content listing
+ 4. MAIN: resource usage analysis for each stage
+
+ 
